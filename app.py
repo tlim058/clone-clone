@@ -1,7 +1,8 @@
 from flask import Flask,render_template,request
 import google.generativeai as palm
+import os
 
-api = "AIzaSyCaQcgKn95ZO6AR1t2PXzk9UydTkt4sWZQ"
+api = os.getenv("MAKERSUITE_API_TOKEN)
 palm.configure(api_key=api)
 model = {"model": "models/chat-bison-001"}
 
